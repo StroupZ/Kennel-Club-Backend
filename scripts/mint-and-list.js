@@ -12,7 +12,6 @@ async function mintAndList() {
     } else {
         basicNft = await ethers.getContract("BasicNft")
     }
-    // const basicNft = await ethers.getContract("BasicNft")
     console.log("Minting...")
     const mintTx = await basicNft.mintNft()
     const mintTxReceipt = await mintTx.wait(1)
